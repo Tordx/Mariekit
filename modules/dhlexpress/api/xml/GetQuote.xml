@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:DCTRequest xmlns:p="http://www.dhl.com" xmlns:p1="http://www.dhl.com/datatypes" 
+xmlns:p2="http://www.dhl.com/DCTRequestdatatypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.dhl.com DCT-req.xsd" schemaVersion="2.0">
+  <GetQuote>
+    <Request>
+      <ServiceHeader>
+        <MessageTime></MessageTime>
+        <MessageReference></MessageReference>
+        <SiteID></SiteID>
+        <Password></Password>
+      </ServiceHeader>
+      <MetaData>
+        <SoftwareName>PRESTASHOP</SoftwareName>
+        <SoftwareVersion></SoftwareVersion>
+      </MetaData>       
+    </Request>
+    <From>
+      <CountryCode></CountryCode>
+      <Postalcode></Postalcode>
+      <City></City>
+    </From>
+    <BkgDetails>
+      <PaymentCountryCode></PaymentCountryCode>
+      <Date></Date>
+      <ReadyTime></ReadyTime>
+      <ReadyTimeGMTOffset>+01:00</ReadyTimeGMTOffset>
+      <DimensionUnit></DimensionUnit>
+      <WeightUnit></WeightUnit>
+      <Pieces>
+      </Pieces>
+      <PaymentAccountNumber></PaymentAccountNumber>
+      <IsDutiable>N</IsDutiable>
+      <NetworkTypeCode>AL</NetworkTypeCode>
+      <QtdShp>
+      </QtdShp>
+    </BkgDetails>
+    <To>
+      <CountryCode></CountryCode>
+      <Postalcode></Postalcode>
+      <City></City>
+    </To>
+  </GetQuote>
+</p:DCTRequest>

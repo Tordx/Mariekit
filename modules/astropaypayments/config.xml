@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>astropaypayments</name>
+	<displayName><![CDATA[AstroPay for Prestashop]]></displayName>
+	<version><![CDATA[1.0.1]]></version>
+	<description><![CDATA[Accept local payment methods using your AstroPay Merchant account.]]></description>
+	<author><![CDATA[SkillsUp]]></author>
+	<tab><![CDATA[payments_gateways]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>

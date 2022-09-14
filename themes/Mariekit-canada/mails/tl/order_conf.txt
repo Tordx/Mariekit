@@ -1,0 +1,45 @@
+ 
+
+{shop_url}
+
+Ang Hi {firstname}{lastname},
+
+Thank you for shopping on {shop_name}!
+
+Order details
+
+Ang order: {order_name} Inilagay sa {date}
+
+Ang pagbabayad: {payment}
+
+Reference	Produkto	Unit price	Quantity	Total price  {products_txt} {discounts_txt}
+Mga produkto	{total_products}
+Discounts	{total_discounts}
+Ang pagbabalot ng regalo	{total_wrapping}
+Shipping	{total_shipping}
+Including total tax	{total_tax_paid}
+Total paid	{total_paid}
+
+Shipping
+
+Ang tagapagpadala: {carrier}
+
+Ang pagbabayad: {payment}
+
+Recycled packaging: {recycled_packaging_label}
+
+Ang adres ng paghahatiran
+
+{delivery_block_txt}
+
+Ang adres ng pagsingil
+
+{invoice_block_txt}
+
+Follow your order and download your invoice on our shop, go to the [Order history and details]({history_url}) section of your customer account.
+
+If you have a guest account, you can follow your order via the [Guest Tracking]({guest_tracking_url}) section on our shop.
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail&utm_campaign=footer_1-7)

@@ -1,0 +1,49 @@
+[
+    {
+        "name": "klaviyo/php-sdk",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/klaviyo/php-klaviyo.git",
+            "reference": "15553b1c0954d074bd098fcef4f211b6dfb8eb16"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/klaviyo/php-klaviyo/zipball/15553b1c0954d074bd098fcef4f211b6dfb8eb16",
+            "reference": "15553b1c0954d074bd098fcef4f211b6dfb8eb16",
+            "shasum": ""
+        },
+        "require": {
+            "ext-curl": "*",
+            "ext-json": "*"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "^9"
+        },
+        "time": "2020-09-16T14:31:25+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Klaviyo\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache2"
+        ],
+        "authors": [
+            {
+                "name": "Klaviyo",
+                "homepage": "https://github.com/klaviyo"
+            }
+        ],
+        "description": "Klaviyo PHP SDK",
+        "homepage": "http://github.com/klaviyo",
+        "keywords": [
+            "klaviyo",
+            "sdk"
+        ]
+    }
+]

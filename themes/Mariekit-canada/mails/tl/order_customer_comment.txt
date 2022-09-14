@@ -1,0 +1,19 @@
+ 
+
+{shop_url}
+
+Hi,
+
+Message from customer
+
+Ikaw ay nakatanggap ng isang bagong mensahe patungkol sa order na may reperensiya {order_name}.
+
+Ang mamimili: {firstname} {lastname} ({email})
+
+Ang mensahe ng mamimili:
+
+{message}
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail&utm_campaign=footer_1-7)

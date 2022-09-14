@@ -1,0 +1,19 @@
+ 
+
+{shop_url}
+
+Mensahe mula sa isang {shop_name} mamimili
+
+Customer Email Address: {email}
+
+Order ID #:  {order_name}
+
+Maglakip ng payl: {attached_file}
+
+Ang mensahe ng mamimili:
+
+{message}
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail&utm_campaign=footer_1-7)

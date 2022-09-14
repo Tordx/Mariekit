@@ -1,0 +1,43 @@
+ 
+
+{shop_url}
+
+Binabati kita!
+
+A new order was placed on {shop_name} by the following customer: {firstname} {lastname} ({email})
+
+Order details
+
+Ang order: {order_name} Inilagay sa {date}
+
+Ang pagbabayad: {payment}
+
+Reference	Produkto	Unit price	Quantity	Total price   {items}
+Mga produkto	{total_products}
+Discounts	{total_discounts}
+Ang pagbabalot ng regalo	{total_wrapping}
+Shipping	{total_shipping}
+Including total tax	{total_tax_paid}
+Total paid	{total_paid}
+
+Carrier
+
+Ang tagapagpadala: {carrier}
+
+Ang pagbabayad: {payment}
+
+Ang adres ng paghahatiran
+
+{delivery_block_html}
+
+Ang adres ng pagsingil
+
+{invoice_block_html}
+
+Ang mensahe ng mamimili:
+
+{message}
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail&utm_campaign=footer_1-7)

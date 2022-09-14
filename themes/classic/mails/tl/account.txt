@@ -1,0 +1,29 @@
+ 
+
+{shop_url}
+
+Ang Hi {firstname}{lastname},
+
+Salamat sayo para sa pag-gawa ng isang account ng mamimili sa {shop_name}.
+
+Your login details on {shop_name}
+
+Ito ang iyong mga detalye sa pag-log in:
+
+Email address: {email}
+
+Ang importanteng mga tip ng seguridad:
+
+1. Panatilihing ingatan ang mga detalye ng iyong account.
+
+2. Kailan ma'y huwag ibunyag ang mga detalye ng iyong pag-log in sa kahit na sino.
+
+3. Baguhin ang iyong password ng regular.
+
+4. Ang gumagamit ng iyong account ng ilegal ay dapat ng maging suspect, mangyaring sabihin sa amin agad.
+
+Maaari ka ng maglagay ng mga order sa iyong shop: [{shop_name}]({shop_url})
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail&utm_campaign=footer_1-7)

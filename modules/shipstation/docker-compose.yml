@@ -1,0 +1,42 @@
+version: "3"
+
+volumes:
+  app_data:
+  db_data:
+
+services:
+  app:
+    build:
+      dockerfile: ./Dockerfile
+      context: .
+    ports:
+      - ${APP_HOST_PORT}:80
+    depends_on:
+      - database
+    environment:
+      - APP_HOST_PORT=${APP_HOST_PORT}
+      - PS_DEV_MODE=${PS_DEV_MODE}
+      - DB_SERVER=database
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWD=${MYSQL_PASSWORD}
+      - DB_NAME=${MYSQL_DATABASE}
+      - PS_INSTALL_AUTO=1
+      - PS_DOMAIN=localhost:${APP_HOST_PORT}
+      - PS_FOLDER_INSTALL=custom-install-folder
+      - ADMIN_MAIL=${ADMIN_MAIL}
+      - ADMIN_PASSWD=${ADMIN_PASSWD}
+    volumes:
+      - app_data:/var/www/html
+
+  database:
+    image: mysql/mysql-server:${MYSQL_VERSION}
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - ${MYSQL_HOST_PORT}:3306
+    environment:
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ONETIME_PASSWORD=${MYSQL_ONETIME_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql

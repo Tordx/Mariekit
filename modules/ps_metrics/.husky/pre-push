@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+cd _dev
+npx ts-node ./utils/dot-env-check.ts --local ../.env --dist ../.env.dist
+npx ts-node ./utils/check-branch-name.ts

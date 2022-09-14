@@ -1,0 +1,16 @@
+ 
+
+{shop_url}
+
+Ang Hi {firstname}{lastname},
+
+Sponsorship Program
+
+Kami ay gumawa ng isang butser sa iyong pangalan para sa pagtutukoy ng isang kaibigan.
+Ito ang code ng iyong butser: {voucher_num}, kasama ang isang halaga ng {voucher_num}
+
+Kopyahin/idikit lamang ang code na ito sa panahon ng proseso ng pagbabayad para sa iyong susunod na order.
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail&utm_campaign=footer_1-7)

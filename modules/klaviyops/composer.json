@@ -1,0 +1,30 @@
+{
+    "name": "klaviyo/klaviyo-prestashop",
+    "description": "A plugin to integrate Prestashop with KLAVIYO",
+    "authors": [
+        {
+            "name": "Klaviyo",
+            "email": "successengineers@klaviyo.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "klaviyo/php-sdk": "2.2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Klaviyo\\Classes\\": "classes"
+        },
+        "classmap": [
+            "klaviyops.php",
+            "classes/",
+            "controllers/front/ajax.php"
+        ],
+        "exclude-from-classmap": []
+    },
+    "config": {
+        "preferred-install": "dist",
+        "prepend-autoloader": false
+    },
+    "type": "prestashop-module"
+}
