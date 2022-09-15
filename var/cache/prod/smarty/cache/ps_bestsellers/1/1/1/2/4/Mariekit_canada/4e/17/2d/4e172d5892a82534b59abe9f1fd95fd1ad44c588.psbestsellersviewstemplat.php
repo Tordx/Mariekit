@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-09-14 06:29:19
+/* Smarty version 3.1.43, created on 2022-09-15 04:30:20
   from 'module:psbestsellersviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_6321acffa647a9_27832580',
+  'unifunc' => 'content_6322e29c153350_27654419',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_6321acffa647a9_27832580 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6322e29c153350_27654419 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="featured-products clearfix mt-3">
   <h2 class="h2 products-section-title text-uppercase">
     Best Sellers
@@ -100,12 +100,6 @@ function content_6321acffa647a9_27832580 (Smarty_Internal_Template $_smarty_tpl)
 
         
           
-<div class="product-list-reviews" data-id="1" data-url="http://192.168.0.191/prestashop/en/module/productcomments/CommentGrade">
-  <div class="grade-stars small-stars"></div>
-  <div class="comments-nb"></div>
-</div>
-
-
         
       </div>
 
@@ -171,12 +165,6 @@ function content_6321acffa647a9_27832580 (Smarty_Internal_Template $_smarty_tpl)
 
         
           
-<div class="product-list-reviews" data-id="37" data-url="http://192.168.0.191/prestashop/en/module/productcomments/CommentGrade">
-  <div class="grade-stars small-stars"></div>
-  <div class="comments-nb"></div>
-</div>
-
-
         
       </div>
 
@@ -241,12 +229,6 @@ function content_6321acffa647a9_27832580 (Smarty_Internal_Template $_smarty_tpl)
 
         
           
-<div class="product-list-reviews" data-id="16" data-url="http://192.168.0.191/prestashop/en/module/productcomments/CommentGrade">
-  <div class="grade-stars small-stars"></div>
-  <div class="comments-nb"></div>
-</div>
-
-
         
       </div>
 
@@ -311,12 +293,6 @@ function content_6321acffa647a9_27832580 (Smarty_Internal_Template $_smarty_tpl)
 
         
           
-<div class="product-list-reviews" data-id="10" data-url="http://192.168.0.191/prestashop/en/module/productcomments/CommentGrade">
-  <div class="grade-stars small-stars"></div>
-  <div class="comments-nb"></div>
-</div>
-
-
         
       </div>
 

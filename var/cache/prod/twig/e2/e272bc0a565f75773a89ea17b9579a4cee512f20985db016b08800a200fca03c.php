@@ -30,7 +30,7 @@ class __TwigTemplate_c8b0b7a0a19c9635053943a161625a02b4a5f75efcd8bdb03254026448c
         echo "
 ";
         // line 26
-        $this->loadTemplate("@PrestaShop/Admin/Sell/Order/Order/Blocks/change_orders_status_modal.html.twig", "@PrestaShop/Admin/Sell/Order/Order/Blocks/change_orders_status_modal.html.twig", 26, "750178278")->display(twig_array_merge($context, ["id" => "changeOrdersStatusModal", "title" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Choose an order status", [], "Admin.Orderscustomers.Feature"), "closable" => true, "actions" => [0 => ["type" => "button", "label" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Update status", [], "Admin.Orderscustomers.Feature"), "class" => "btn btn-primary btn-lg js-submit-modal-form-btn"]]]));
+        $this->loadTemplate("@PrestaShop/Admin/Sell/Order/Order/Blocks/change_orders_status_modal.html.twig", "@PrestaShop/Admin/Sell/Order/Order/Blocks/change_orders_status_modal.html.twig", 26, "1556461724")->display(twig_array_merge($context, ["id" => "changeOrdersStatusModal", "title" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Choose an order status", [], "Admin.Orderscustomers.Feature"), "closable" => true, "actions" => [0 => ["type" => "button", "label" => $this->env->getExtension('Symfony\Bridge\Twig\Extension\TranslationExtension')->trans("Update status", [], "Admin.Orderscustomers.Feature"), "class" => "btn btn-primary btn-lg js-submit-modal-form-btn"]]]));
     }
 
     public function getTemplateName()
@@ -64,7 +64,7 @@ class __TwigTemplate_c8b0b7a0a19c9635053943a161625a02b4a5f75efcd8bdb03254026448c
 
 
 /* @PrestaShop/Admin/Sell/Order/Order/Blocks/change_orders_status_modal.html.twig */
-class __TwigTemplate_c8b0b7a0a19c9635053943a161625a02b4a5f75efcd8bdb03254026448c0b8ec___750178278 extends \Twig\Template
+class __TwigTemplate_c8b0b7a0a19c9635053943a161625a02b4a5f75efcd8bdb03254026448c0b8ec___1556461724 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {

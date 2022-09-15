@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-09-14 06:29:18
+/* Smarty version 3.1.43, created on 2022-09-15 04:30:13
   from 'module:psimagesliderviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_6321acfe8f3c59_17850626',
+  'unifunc' => 'content_6322e295d50398_24894253',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_6321acfe8f3c59_17850626 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6322e295d50398_24894253 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
   <div id="carousel" data-ride="carousel" class="carousel slide" data-interval="5000" data-wrap="true" data-pause="hover" data-touch="true">
     <ol class="carousel-indicators">
@@ -31,28 +31,18 @@ function content_6321acfe8f3c59_17850626 (Smarty_Internal_Template $_smarty_tpl)
           <a href="http://192.168.0.191/prestashop/en/content/6-pasabuy">
             <figure>
               <img src="http://192.168.0.191/prestashop/modules/ps_imageslider/images/db15520e53fb14d96bee9ed7e0973ea039950299_C4425BCB-91C6-419C-B25F-2D0CCDFBD3B9.jpeg" alt="We offer the safest and convenient pasabuy here in canada" loading="lazy" width="1110" height="340">
-                              <figcaption class="caption">
-                  <h2 class="display-1 text-uppercase">PASABUY</h2>
-                  <div class="caption-description"><h3>PASABUY NA WITH MARIE KIT CANADA</h3>
-<p>want to buy available products from the philippines straight to your door, mag-pasabuy na!</p></div>
-                </figcaption>
                           </figure>
           </a>
         </li>
               <li class="carousel-item " role="option" aria-hidden="true">
-          <a href="http://www.prestashop.com/?utm_source=back-office&amp;utm_medium=v17_homeslider&amp;utm_campaign=back-office-EN&amp;utm_content=download">
+          <a href="http://192.168.0.191/prestashop/en/16-collagen">
             <figure>
               <img src="http://192.168.0.191/prestashop/modules/ps_imageslider/images/29a0615324bb6b93a425c84d060b4a3a95c3060e_Untitled-1.png" alt="" loading="lazy" width="1110" height="340">
-                              <figcaption class="caption">
-                  <h2 class="display-1 text-uppercase"></h2>
-                  <div class="caption-description"><h1 style="text-align:right;">ULTRA COLLAGEN DRINK</h1>
-<p style="text-align:right;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique in tortor et dignissim. Quisque non tempor leo. Maecenas egestas sem elit</p></div>
-                </figcaption>
                           </figure>
           </a>
         </li>
               <li class="carousel-item " role="option" aria-hidden="true">
-          <a href="http://192.168.0.191/prestashop/en/content/6-pasabuy">
+          <a href="http://192.168.0.191/prestashop/en/17-sunscreen">
             <figure>
               <img src="http://192.168.0.191/prestashop/modules/ps_imageslider/images/1ad23aefc0ecfc5e1f90d1461ba6bd2627ab55e9_cccc.jpg" alt="" loading="lazy" width="1110" height="340">
                               <figcaption class="caption">

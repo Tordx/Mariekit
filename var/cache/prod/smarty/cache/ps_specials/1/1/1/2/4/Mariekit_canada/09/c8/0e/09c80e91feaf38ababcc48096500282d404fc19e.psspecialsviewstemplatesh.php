@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-09-14 06:29:20
+/* Smarty version 3.1.43, created on 2022-09-15 04:30:21
   from 'module:psspecialsviewstemplatesh' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_6321ad00309ff5_66153697',
+  'unifunc' => 'content_6322e29d176364_61155369',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_6321ad00309ff5_66153697 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6322e29d176364_61155369 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <section class="featured-products clearfix mt-3">
   <h2 class="h2 products-section-title text-uppercase">
@@ -101,12 +101,6 @@ function content_6321ad00309ff5_66153697 (Smarty_Internal_Template $_smarty_tpl)
 
         
           
-<div class="product-list-reviews" data-id="1" data-url="http://192.168.0.191/prestashop/en/module/productcomments/CommentGrade">
-  <div class="grade-stars small-stars"></div>
-  <div class="comments-nb"></div>
-</div>
-
-
         
       </div>
 

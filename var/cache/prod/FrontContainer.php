@@ -382,8 +382,6 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
             'prestashop.core.string.character_cleaner' => 'getPrestashop_Core_String_CharacterCleanerService',
             'prestashop.database.naming_strategy' => 'getPrestashop_Database_NamingStrategyService',
             'prestashop.translation.translator_language_loader' => 'getPrestashop_Translation_TranslatorLanguageLoaderService',
-            'product_comment_criterion_repository' => 'getProductCommentCriterionRepositoryService',
-            'product_comment_repository' => 'getProductCommentRepositoryService',
             'ps_accounts.context' => 'getPsAccounts_ContextService',
             'ps_accounts.logger' => 'getPsAccounts_LoggerService',
             'ps_accounts.module' => 'getPsAccounts_ModuleService',
@@ -1711,14 +1709,11 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $b = new \Doctrine\Persistence\Mapping\Driver\MappingDriverChain();
 
         $c = ${($_ = isset($this->services['annotation_reader']) ? $this->services['annotation_reader'] : ($this->services['annotation_reader'] = new \Doctrine\Common\Annotations\AnnotationReader())) && false ?: '_'};
-        $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\productcomments\\src\\Entity']);
-        $d->addExcludePaths([0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\productcomments\\src\\Entity/index.php']);
-        $e = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\ps_checkout\\src\\Entity']);
-        $e->addExcludePaths([0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\ps_checkout\\src\\Entity/index.php']);
+        $d = new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\ps_checkout\\src\\Entity']);
+        $d->addExcludePaths([0 => 'C:\\xampp\\htdocs\\prestashop\\modules\\ps_checkout\\src\\Entity/index.php']);
 
         $b->addDriver(new \Doctrine\ORM\Mapping\Driver\AnnotationDriver($c, [0 => 'C:\\xampp\\htdocs\\prestashop\\src\\PrestaShopBundle\\Entity']), 'PrestaShop');
-        $b->addDriver($d, 'PrestaShop\\Module\\ProductComment\\Entity');
-        $b->addDriver($e, 'PrestaShop\\Module\\PrestashopCheckout\\Entity');
+        $b->addDriver($d, 'PrestaShop\\Module\\PrestashopCheckout\\Entity');
 
         $a->setEntityNamespaces(['PrestaShopBundle\\Entity' => 'PrestaShop']);
         $a->setMetadataCacheImpl(${($_ = isset($this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache']) ? $this->services['doctrine_cache.providers.doctrine.orm.default_metadata_cache'] : $this->getDoctrineCache_Providers_Doctrine_Orm_DefaultMetadataCacheService()) && false ?: '_'});
@@ -1735,7 +1730,6 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
         $a->setEntityListenerResolver(${($_ = isset($this->services['doctrine.orm.default_entity_listener_resolver']) ? $this->services['doctrine.orm.default_entity_listener_resolver'] : ($this->services['doctrine.orm.default_entity_listener_resolver'] = new \Doctrine\Bundle\DoctrineBundle\Mapping\ContainerEntityListenerResolver($this))) && false ?: '_'});
         $a->setRepositoryFactory(new \Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory(new \Symfony\Component\DependencyInjection\ServiceLocator([])));
         $a->addCustomStringFunction('regexp', 'DoctrineExtensions\\Query\\Mysql\\Regexp');
-        $a->addEntityNamespace('Moduleproductcomments', 'PrestaShop\\Module\\ProductComment\\Entity');
         $a->addEntityNamespace('ModulepsCheckout', 'PrestaShop\\Module\\PrestashopCheckout\\Entity');
 
         $this->services['doctrine.orm.default_entity_manager'] = $instance = \Doctrine\ORM\EntityManager::create(${($_ = isset($this->services['doctrine.dbal.default_connection']) ? $this->services['doctrine.dbal.default_connection'] : $this->getDoctrine_Dbal_DefaultConnectionService()) && false ?: '_'}, $a);
@@ -2086,26 +2080,6 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
     }
 
     /**
-     * Gets the public 'product_comment_criterion_repository' shared service.
-     *
-     * @return \PrestaShop\Module\ProductComment\Repository\ProductCommentCriterionRepository
-     */
-    protected function getProductCommentCriterionRepositoryService()
-    {
-        return $this->services['product_comment_criterion_repository'] = new \PrestaShop\Module\ProductComment\Repository\ProductCommentCriterionRepository(${($_ = isset($this->services['doctrine.dbal.default_connection']) ? $this->services['doctrine.dbal.default_connection'] : $this->getDoctrine_Dbal_DefaultConnectionService()) && false ?: '_'}, 'ps_');
-    }
-
-    /**
-     * Gets the public 'product_comment_repository' shared service.
-     *
-     * @return \PrestaShop\Module\ProductComment\Repository\ProductCommentRepository
-     */
-    protected function getProductCommentRepositoryService()
-    {
-        return $this->services['product_comment_repository'] = new \PrestaShop\Module\ProductComment\Repository\ProductCommentRepository(${($_ = isset($this->services['doctrine.dbal.default_connection']) ? $this->services['doctrine.dbal.default_connection'] : $this->getDoctrine_Dbal_DefaultConnectionService()) && false ?: '_'}, 'ps_', ${($_ = isset($this->services['prestashop.adapter.legacy.configuration']) ? $this->services['prestashop.adapter.legacy.configuration'] : ($this->services['prestashop.adapter.legacy.configuration'] = new \PrestaShop\PrestaShop\Adapter\Configuration())) && false ?: '_'}->get("PRODUCT_COMMENTS_ALLOW_GUESTS"), ${($_ = isset($this->services['prestashop.adapter.legacy.configuration']) ? $this->services['prestashop.adapter.legacy.configuration'] : ($this->services['prestashop.adapter.legacy.configuration'] = new \PrestaShop\PrestaShop\Adapter\Configuration())) && false ?: '_'}->get("PRODUCT_COMMENTS_MINIMAL_TIME"));
-    }
-
-    /**
      * Gets the public 'ps_accounts.context' shared service.
      *
      * @return \Context
@@ -2182,7 +2156,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_Cache_DirectoryService()
     {
-        return $this->services['ps_checkout.cache.directory'] = new \PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider('1.7.8.7', 'C:\\xampp\\htdocs\\prestashop', false);
+        return $this->services['ps_checkout.cache.directory'] = new \PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider('1.0.0', 'C:\\xampp\\htdocs\\prestashop', false);
     }
 
     /**
@@ -2192,7 +2166,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_Cache_Paypal_MerchantIntegrationService()
     {
-        return $this->services['ps_checkout.cache.paypal.merchant_integration'] = new \Symfony\Component\Cache\Simple\FilesystemCache('merchant-integration', 86400, ${($_ = isset($this->services['ps_checkout.cache.directory']) ? $this->services['ps_checkout.cache.directory'] : ($this->services['ps_checkout.cache.directory'] = new \PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider('1.7.8.7', 'C:\\xampp\\htdocs\\prestashop', false))) && false ?: '_'}->getPath());
+        return $this->services['ps_checkout.cache.paypal.merchant_integration'] = new \Symfony\Component\Cache\Simple\FilesystemCache('merchant-integration', 86400, ${($_ = isset($this->services['ps_checkout.cache.directory']) ? $this->services['ps_checkout.cache.directory'] : ($this->services['ps_checkout.cache.directory'] = new \PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider('1.0.0', 'C:\\xampp\\htdocs\\prestashop', false))) && false ?: '_'}->getPath());
     }
 
     /**
@@ -2202,7 +2176,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_Cache_Paypal_OrderService()
     {
-        return $this->services['ps_checkout.cache.paypal.order'] = new \Symfony\Component\Cache\Simple\FilesystemCache('paypal-orders', 3600, ${($_ = isset($this->services['ps_checkout.cache.directory']) ? $this->services['ps_checkout.cache.directory'] : ($this->services['ps_checkout.cache.directory'] = new \PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider('1.7.8.7', 'C:\\xampp\\htdocs\\prestashop', false))) && false ?: '_'}->getPath());
+        return $this->services['ps_checkout.cache.paypal.order'] = new \Symfony\Component\Cache\Simple\FilesystemCache('paypal-orders', 3600, ${($_ = isset($this->services['ps_checkout.cache.directory']) ? $this->services['ps_checkout.cache.directory'] : ($this->services['ps_checkout.cache.directory'] = new \PrestaShop\ModuleLibCacheDirectoryProvider\Cache\CacheDirectoryProvider('1.0.0', 'C:\\xampp\\htdocs\\prestashop', false))) && false ?: '_'}->getPath());
     }
 
     /**
@@ -2392,7 +2366,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_LoggerService()
     {
-        return $this->services['ps_checkout.logger'] = ${($_ = isset($this->services['ps_checkout.logger.factory']) ? $this->services['ps_checkout.logger.factory'] : $this->getPsCheckout_Logger_FactoryService()) && false ?: '_'}->build(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.8.7', 'C:\\xampp\\htdocs\\prestashop'))) && false ?: '_'});
+        return $this->services['ps_checkout.logger'] = ${($_ = isset($this->services['ps_checkout.logger.factory']) ? $this->services['ps_checkout.logger.factory'] : $this->getPsCheckout_Logger_FactoryService()) && false ?: '_'}->build(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.0.0', 'C:\\xampp\\htdocs\\prestashop'))) && false ?: '_'});
     }
 
     /**
@@ -2412,7 +2386,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_Logger_DirectoryService()
     {
-        return $this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.8.7', 'C:\\xampp\\htdocs\\prestashop');
+        return $this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.0.0', 'C:\\xampp\\htdocs\\prestashop');
     }
 
     /**
@@ -2452,7 +2426,7 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
      */
     protected function getPsCheckout_Logger_Handler_FactoryService()
     {
-        return $this->services['ps_checkout.logger.handler.factory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerHandlerFactory(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.7.8.7', 'C:\\xampp\\htdocs\\prestashop'))) && false ?: '_'}->getPath(), ${($_ = isset($this->services['ps_checkout.logger.filename']) ? $this->services['ps_checkout.logger.filename'] : $this->getPsCheckout_Logger_FilenameService()) && false ?: '_'}->get(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getMaxFiles(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getLevel());
+        return $this->services['ps_checkout.logger.handler.factory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerHandlerFactory(${($_ = isset($this->services['ps_checkout.logger.directory']) ? $this->services['ps_checkout.logger.directory'] : ($this->services['ps_checkout.logger.directory'] = new \PrestaShop\Module\PrestashopCheckout\Logger\LoggerDirectory('1.0.0', 'C:\\xampp\\htdocs\\prestashop'))) && false ?: '_'}->getPath(), ${($_ = isset($this->services['ps_checkout.logger.filename']) ? $this->services['ps_checkout.logger.filename'] : $this->getPsCheckout_Logger_FilenameService()) && false ?: '_'}->get(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getMaxFiles(), ${($_ = isset($this->services['ps_checkout.logger.configuration']) ? $this->services['ps_checkout.logger.configuration'] : $this->getPsCheckout_Logger_ConfigurationService()) && false ?: '_'}->getLevel());
     }
 
     /**
@@ -4118,68 +4092,66 @@ class FrontContainer extends \PrestaShop\PrestaShop\Adapter\Container\LegacyCont
                 7 => 'gridhtml',
                 8 => 'gsitemap',
                 9 => 'pagesnotfound',
-                10 => 'productcomments',
-                11 => 'ps_banner',
-                12 => 'ps_categorytree',
-                13 => 'ps_contactinfo',
-                14 => 'ps_crossselling',
-                15 => 'ps_currencyselector',
-                16 => 'ps_customeraccountlinks',
-                17 => 'ps_customtext',
-                18 => 'ps_dataprivacy',
-                19 => 'ps_emailsubscription',
-                20 => 'ps_faviconnotificationbo',
-                21 => 'ps_featuredproducts',
-                22 => 'ps_imageslider',
-                23 => 'ps_languageselector',
-                24 => 'ps_linklist',
-                25 => 'ps_mainmenu',
-                26 => 'ps_searchbar',
-                27 => 'ps_sharebuttons',
-                28 => 'ps_shoppingcart',
-                29 => 'ps_socialfollow',
-                30 => 'ps_themecusto',
-                31 => 'ps_wirepayment',
-                32 => 'statsbestcategories',
-                33 => 'statsbestcustomers',
-                34 => 'statsbestproducts',
-                35 => 'statsbestsuppliers',
-                36 => 'statsbestvouchers',
-                37 => 'statscarrier',
-                38 => 'statscatalog',
-                39 => 'statscheckup',
-                40 => 'statsdata',
-                41 => 'statsforecast',
-                42 => 'statsnewsletter',
-                43 => 'statspersonalinfos',
-                44 => 'statsproduct',
-                45 => 'statsregistrations',
-                46 => 'statssales',
-                47 => 'statssearch',
-                48 => 'statsstock',
-                49 => 'welcome',
-                50 => 'gamification',
-                51 => 'psaddonsconnect',
-                52 => 'psgdpr',
-                53 => 'ps_mbo',
-                54 => 'ps_buybuttonlite',
-                55 => 'ps_metrics',
-                56 => 'ps_facebook',
-                57 => 'psxmarketingwithgoogle',
-                58 => 'blockreassurance',
-                59 => 'ps_facetedsearch',
-                60 => 'ps_accounts',
-                61 => 'ps_eventbus',
-                62 => 'klaviyops',
-                63 => 'sendinblue',
-                64 => 'crazyelements',
-                65 => 'ps_checkout',
-                66 => 'ps_newproducts',
-                67 => 'ps_specials',
-                68 => 'ps_bestsellers',
-                69 => 'ps_viewedproduct',
-                70 => 'tidiolivechat',
-                71 => 'dhlexpress',
+                10 => 'ps_banner',
+                11 => 'ps_categorytree',
+                12 => 'ps_contactinfo',
+                13 => 'ps_crossselling',
+                14 => 'ps_currencyselector',
+                15 => 'ps_customeraccountlinks',
+                16 => 'ps_customtext',
+                17 => 'ps_dataprivacy',
+                18 => 'ps_emailsubscription',
+                19 => 'ps_faviconnotificationbo',
+                20 => 'ps_featuredproducts',
+                21 => 'ps_imageslider',
+                22 => 'ps_languageselector',
+                23 => 'ps_linklist',
+                24 => 'ps_mainmenu',
+                25 => 'ps_searchbar',
+                26 => 'ps_sharebuttons',
+                27 => 'ps_shoppingcart',
+                28 => 'ps_socialfollow',
+                29 => 'ps_themecusto',
+                30 => 'ps_wirepayment',
+                31 => 'statsbestcategories',
+                32 => 'statsbestcustomers',
+                33 => 'statsbestproducts',
+                34 => 'statsbestsuppliers',
+                35 => 'statsbestvouchers',
+                36 => 'statscarrier',
+                37 => 'statscatalog',
+                38 => 'statscheckup',
+                39 => 'statsdata',
+                40 => 'statsforecast',
+                41 => 'statsnewsletter',
+                42 => 'statspersonalinfos',
+                43 => 'statsproduct',
+                44 => 'statsregistrations',
+                45 => 'statssales',
+                46 => 'statssearch',
+                47 => 'statsstock',
+                48 => 'welcome',
+                49 => 'psaddonsconnect',
+                50 => 'psgdpr',
+                51 => 'ps_mbo',
+                52 => 'ps_buybuttonlite',
+                53 => 'ps_metrics',
+                54 => 'ps_facebook',
+                55 => 'psxmarketingwithgoogle',
+                56 => 'blockreassurance',
+                57 => 'ps_facetedsearch',
+                58 => 'ps_accounts',
+                59 => 'ps_eventbus',
+                60 => 'klaviyops',
+                61 => 'sendinblue',
+                62 => 'crazyelements',
+                63 => 'ps_checkout',
+                64 => 'ps_newproducts',
+                65 => 'ps_specials',
+                66 => 'ps_bestsellers',
+                67 => 'ps_viewedproduct',
+                68 => 'tidiolivechat',
+                69 => 'dhlexpress',
             ],
             'ps_cache_dir' => 'C:\\xampp\\htdocs\\prestashop/var/cache/prod\\',
             'mail_themes_uri' => '/mails/themes',

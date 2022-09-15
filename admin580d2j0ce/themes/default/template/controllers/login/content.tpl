@@ -25,9 +25,9 @@
 <div id="login-panel">
 	<div id="login-header">
 		<h1 class="text-center">
-			<img id="logo" src="{$img_dir}prestashop@2x.png" width="123px" height="24px" alt="PrestaShop" />
+			<img id="logo" src="{$img_dir}prestashop@2x.png" width="230px" height="100px" alt="PrestaShop" />
 		</h1>
-		<div class="text-center">{$ps_version}</div>
+		<div class="text-center">1.0.0</div>
 		<div id="error" class="hide alert alert-danger">
 		{if isset($errors)}
 			<h4>
@@ -49,7 +49,7 @@
 		<div class="alert alert-warning">{$warningSslMessage}</div>
 		{/if}
 	</div>
-	<div id="shop-img"><img src="{$img_dir}preston-login@2x.png" alt="{$shop_name}" width="69.5px" height="118.5px" /></div>
+	{* <div id="shop-img"><img src="{$img_dir}preston-login@2x.png" alt="{$shop_name}" width="69.5px" height="118.5px" /></div> *}
 	<div class="flip-container">
 		<div class="flipper">
 			<div class="front front_login panel" {if isset($reset_token) && isset($id_employee)}style="display:none;"{/if}>
@@ -168,20 +168,20 @@
 	{hook h="displayAdminLogin"}
 	<div id="login-footer">
 		<p class="text-center text-muted">
-			<a href="https://www.prestashop.com/" onclick="return !window.open(this.href);">
-				&copy; PrestaShop&#8482; 2007-{$smarty.now|date_format:"%Y"} - All rights reserved
+			<a href="https://www.postrix.net" onclick="return !window.open(this.href);">
+				&copy; Postrix POS &#8482; 2007-{$smarty.now|date_format:"%Y"} - All rights reserved
 			</a>
 		</p>
 		<p class="text-center">
-			<a class="link-social link-twitter _blank" href="https://twitter.com/PrestaShop" title="Twitter">
+			{* <a class="link-social link-twitter _blank" href="https://twitter.com/PrestaShop" title="Twitter">
 				<i class="icon-twitter"></i>
-			</a>
-			<a class="link-social link-facebook _blank" href="https://www.facebook.com/prestashop" title="Facebook">
+			</a> *}
+			<a class="link-social link-facebook _blank" href="https://www.facebook.com/postrix.ph" title="Facebook">
 				<i class="icon-facebook"></i>
 			</a>
-			<a class="link-social link-github _blank" href="https://www.prestashop.com/github" title="Github">
+			{* <a class="link-social link-github _blank" href="https://www.prestashop.com/github" title="Github">
 				<i class="icon-github"></i>
-			</a>
+			</a> *}
 		</p>
 	</div>
 </div>
