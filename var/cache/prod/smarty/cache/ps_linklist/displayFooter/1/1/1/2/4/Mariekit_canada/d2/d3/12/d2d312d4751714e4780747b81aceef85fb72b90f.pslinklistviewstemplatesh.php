@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-09-15 04:18:30
+/* Smarty version 3.1.43, created on 2022-09-15 11:11:45
   from 'module:pslinklistviewstemplatesh' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_6322dfd6bfe467_88925773',
+  'unifunc' => 'content_632340b1365252_74735918',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,13 +18,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_6322dfd6bfe467_88925773 (Smarty_Internal_Template $_smarty_tpl) {
+function content_632340b1365252_74735918 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, array (
   'renderLogo' => 
   array (
     'compiled_filepath' => 'C:\\xampp\\htdocs\\prestashop\\var\\cache\\prod\\smarty\\compile\\Mariekit_canadalayouts_layout_full_width_tpl\\aa\\1f\\f9\\aa1ff9dcd79653ea8c611117e4a59d57718c3e84_2.file.helpers.tpl.php',
     'uid' => 'aa1ff9dcd79653ea8c611117e4a59d57718c3e84',
-    'call_name' => 'smarty_template_function_renderLogo_17860992256322dfd5210d10_16719878',
+    'call_name' => 'smarty_template_function_renderLogo_257974027632340af9416c0_71633464',
   ),
 ));
 ?><div class="col-md-6 links">
@@ -45,7 +45,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-cms-page-6-1"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/content/6-pasabuy"
+                href="http://localhost/prestashop/en/content/6-pasabuy"
                 title=""
                             >
               Pasabuy
@@ -55,7 +55,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-product-page-prices-drop-1"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/prices-drop"
+                href="http://localhost/prestashop/en/prices-drop"
                 title="Our special products"
                             >
               Prices drop
@@ -65,7 +65,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-product-page-new-products-1"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/new-products"
+                href="http://localhost/prestashop/en/new-products"
                 title="Our new products"
                             >
               New products
@@ -75,7 +75,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-product-page-best-sales-1"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/best-sales"
+                href="http://localhost/prestashop/en/best-sales"
                 title="Our best sales"
                             >
               Best sales
@@ -99,7 +99,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-cms-page-3-2"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/content/3-terms-and-conditions-of-use"
+                href="http://localhost/prestashop/en/content/3-terms-and-conditions-of-use"
                 title="Our terms and conditions of use"
                             >
               Terms and conditions of use
@@ -109,7 +109,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-cms-page-4-2"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/content/4-about-us"
+                href="http://localhost/prestashop/en/content/4-about-us"
                 title="Learn more about us"
                             >
               About us
@@ -119,7 +119,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-static-page-contact-2"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/contact-us"
+                href="http://localhost/prestashop/en/contact-us"
                 title="Use our form to contact us"
                             >
               Contact us
@@ -129,7 +129,7 @@ $_smarty_tpl->smarty->ext->_tplFunction->registerTplFunctions($_smarty_tpl, arra
             <a
                 id="link-static-page-sitemap-2"
                 class="cms-page-link"
-                href="http://192.168.0.191/prestashop/en/sitemap"
+                href="http://localhost/prestashop/en/sitemap"
                 title="Lost ? Find what your are looking for"
                             >
               Sitemap
