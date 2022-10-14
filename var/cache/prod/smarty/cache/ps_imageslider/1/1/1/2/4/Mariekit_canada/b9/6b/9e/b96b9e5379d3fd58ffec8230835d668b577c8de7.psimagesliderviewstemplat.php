@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-10 16:51:06
+/* Smarty version 3.1.43, created on 2022-10-13 14:17:05
   from 'module:psimagesliderviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_634485bae272e1_16137775',
+  'unifunc' => 'content_63485621ed73c2_88272119',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -18,7 +18,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_634485bae272e1_16137775 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63485621ed73c2_88272119 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
   <div id="carousel" data-ride="carousel" class="carousel slide" data-interval="5000" data-wrap="true" data-pause="hover" data-touch="true">
     <ol class="carousel-indicators">
@@ -42,13 +42,9 @@ function content_634485bae272e1_16137775 (Smarty_Internal_Template $_smarty_tpl)
           </a>
         </li>
               <li class="carousel-item " role="option" aria-hidden="true">
-          <a href="http://192.168.0.191/prestashop/en/17-sunscreen">
+          <a href="http://localhost/prestashop/en/16-collagen">
             <figure>
-              <img src="http://localhost/prestashop/modules/ps_imageslider/images/1ad23aefc0ecfc5e1f90d1461ba6bd2627ab55e9_cccc.jpg" alt="" loading="lazy" width="1110" height="340">
-                              <figcaption class="caption">
-                  <h2 class="display-1 text-uppercase">Diet Coach</h2>
-                  <div class="caption-description"><p style="text-align:left;"><strong>Available now!</strong></p></div>
-                </figcaption>
+              <img src="http://localhost/prestashop/modules/ps_imageslider/images/249dbd6989f99bb081ccce63b7e41c4d15717fa6_Banner.png" alt="" loading="lazy" width="1110" height="340">
                           </figure>
           </a>
         </li>

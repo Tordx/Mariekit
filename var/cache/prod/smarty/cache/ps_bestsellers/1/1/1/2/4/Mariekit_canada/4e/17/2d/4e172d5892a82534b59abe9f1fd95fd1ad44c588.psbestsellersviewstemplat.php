@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.43, created on 2022-10-10 16:51:08
+/* Smarty version 3.1.43, created on 2022-10-13 14:17:08
   from 'module:psbestsellersviewstemplat' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.43',
-  'unifunc' => 'content_634485bcc16c32_20298719',
+  'unifunc' => 'content_6348562434d915_72417399',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -36,7 +36,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   ),
   'cache_lifetime' => 31536000,
 ),true)) {
-function content_634485bcc16c32_20298719 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6348562434d915_72417399 (Smarty_Internal_Template $_smarty_tpl) {
 ?><section class="featured-products clearfix mt-3">
   <h2 class="h2 products-section-title text-uppercase">
     Best Sellers
